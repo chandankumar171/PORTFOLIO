@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+
+<body>
+  </div>
+  <header>
+    <div class="logo">C<span>S</span></div>
+
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars" id="hamburger-icon"></i>
+    </div>
+
+    <nav id="navbar">
+      <ul>
+        <li><a href="#" onclick="closeMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+        <li><a href="#education" onclick="closeMenu()">Education</a></li>
+        <li><a href="#projects" onclick="closeMenu()">Work</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" style="position:relative;overflow:hidden;">
+    <div id="hero-bg-3d" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></div>
+    <div class="hero-text" style="position:relative;z-index:1;">
+      <h1>Hi There,<br>I'm <span class="gradient-name">Chandan Kumar Sahoo</span></h1>
+      <span id="typing-animation"></span>
+      <div>
+        <a href="assets/Resume.pdf" class="btn-resume" target="_blank" style="color: azure;">Resume <i
+            class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="social-icons">
+        <a
+          href="https://www.linkedin.com/in/chandan-kumar-sahoo-3343a229b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/chandankumar171"><i class="fab fa-github"></i></a>
+        <a href="http://t.me/ChandanKumar_09"><i class="fab fa-telegram"></i></a>
+        <a href="https://www.instagram.com/chandan_9_?igsh=bTdpM2R4dWk3dGF1"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="hero-img" style="position:relative;z-index:1;">
+      <img src="" />
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about" class="about-section" data-aos="fade-right" data-aos-duration="1200">
+    <h2 class="section-title"><i class="fas fa-user"></i> About <span class="gradient-text">Me</span></h2>
+
+    <div class="about-container">
+      <div class="about-image">
+        <img src="assets/mypic.jpg" alt="mypic">
+      </div>
+      <div class="about-content">
+        <h3>I'm Chandan</h3>
+        <h4>Full Stack Developer</h4>
+        <p>
+          I am a Full-Stack developer based in Bhubaneswar, India. I am a BCA undergraduate from Utkal University.
+          I am very passionate about improving my coding skills & developing applications & websites.
+          I build WebApps and Websites using MERN Stack. Working for myself to improve my skills.
+          Love to build Full-Stack clones.
+        </p>
+        <p><strong>Email</strong> : <a href="mailto:chandankumarsahoo171@gmail.com">chandankumarsahoo171@gmail.com</a>
+        </p>
+        <p><strong>Place</strong> : Bhubaneswar, India - 752054</p>
+      </div>
+    </div>
+  </section>
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section" data-aos="zoom-in-up" data-aos-duration="1200">
+    <h2 class="section-title"><i class="fas fa-code"></i> My <span class="gradient-text">Skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+          alt="React" />React</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+          alt="Express" style="filter: invert(1); width: 40px; height: 40px;" />Express</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+          alt="Node.js" />Node.js</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+          alt="MongoDB" />MongoDB</div>
+      <div class="skill"><img
+          src="data:image/jpeg;base64,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"
+          alt="Tailwind" />Tailwind</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"
+          alt="Bootstrap" style="filter: invert(2); width: 40px; height: 40px;" />Bootstrap</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+          alt="HTML" />HTML</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+          alt="CSS" />CSS</div>
+      <div class="skill"><img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          alt="JavaScript" />JavaScript</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+          alt="Java" />Java</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+          alt="C++" />C++</div>
+      <div class="skill"><img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX///8XFxkAAAAQEBMVFRiZmZrBwcHExMRjY2S/v7/l5eVfX2Di4uKbm5uUlJWXl5dnZ2gJCQz5+fkAAAVHR0iQkJGioqPv7+9aWlusrKw7Oz2Dg4PX19ciIiMwMDHPz897e3xwcHEnJymHh4honTguAAADWklEQVR4nO2d23baMBBFZZm2UBISu9xya0jz//9YE0oLyA8xnRmNjs/+AC2dtaUZZBs7BEIIIYQQQgghhBBCCCGEEPJ52of54/LpOfc09JjF2NR1jNM290yUWMRJ9UF8wYy4itWROM89GQ0W/wJ2EQH34lnAKi5yz0ec84BVc597QtJcBKwatI14GbCKu9xTkuXuMmAVv+WekyiJwar+mXtOoqQGJ1jNIjU4ibPck5LkSxKwwgqYLlEGLAv4JZoGBCsytzRYOKnBEQT8mntSksDvwb6A8AYZsCT6igzUiRe+ivY1eqiA8Ab7LllABYRfon0BoaooA5ZOX5GBCkiDpUODpUODpTPCgGAn+r77g1AB+5Yo1GVDGiydERoEq6Ij7INgS7TvHj1UQPglygu/pUODpcMqWjpcoqUDv0TZJkqHBksHvorC35vgUxalAx8Qvk3QYOnAG2Sb+A/a2Xr9KjTW1SgGbHdxT/0gM9yVKD6U/r06jF3HN5kBr0LR4E2sj2PGd5khr0CxTZwE7CJuZAYdjI3BfcJbmVGHYmUw21syNIvMecCqXsqMOww7g53DrczAgzA0mGcfKgZMDGappaYGq7iSGXoAxganMkMPwNigfZkxDmjfCzUD/kAPiG7wZowGoYoM24QJxgGxDLooMoonevg24cOg4nMyPgxqLlEXBuH3oLFB+zZhHNC+0RsXGSyDjYc9SIPX02fQPqCmQRdVVDMgusGNi0Y/wiUq9ryojxO94n94+wLafwxB8V/YPvqgsUEPe1DOoIsiA28wDSj2ClwfRaYvILxBracsxmDQ/qeaYpHxYVDxcwxe96BYH/RhULFN+Ai4sv0tSoPiGP+S8VBkaPCz+DCoWGRGadA+4AO6wfb4mVp5gz4ChvWlQjCDIcwbbIMhPNY6AX20iT3LWiWgG4Mh7KJGQB8n+gPPJwnhisyBbTQJmGcPftC+/IlYYxrsaLcxNk2Mv4Q+U+vM4GFOi+n8SepP2B4DigIf0FObUGFTgxsMb8lRLMM9ek02aUAsg2F2mRBrD4b0sIlmMLkiAmcwhNcIHjCE00fyIAOeLlOwNvGX+2NEvCJz5L07qNTdSSXfe2XU2ay3y+0611tlCCGEEEIIIYQQQgghhBBCCCGEEO/8BlBOLGDtdO/PAAAAAElFTkSuQmCC"
+          alt="ShadCN UI" />ShadCN
+        UI</div>
+      <div class="skill">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+          style="width: 40px; height: 40px;" />
+        Git
+      </div>
+      <div class="skill">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+          style="filter: invert(1); width: 40px; height: 40px;" />
+        GitHub
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education-section" data-aos="fade-left" data-aos-duration="1200">
+    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> My <span class="gradient-text">Education</span></h2>
+    <div class="education-container">
+      <div class="education-item">
+        <i class="fas fa-university education-icon"></i>
+        <h3>Masters of Computer Applications (MCA)</h3>
+        <p class="institute">GITA Autonomous College, Bhubaneswar</p>
+        <p class="year">2025 - Present</p>
+        <p class="desc">Deepening expertise in computer science with a focus on full-stack development and emerging
+          technologies. Enhancing practical skills through academic projects and industry-oriented learning.</p>
+      </div>
+      <div class="education-item">
+        <i class="fas fa-university education-icon"></i>
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p class="institute">S.V.M. (Autonomous) College, Jagatsinghpur</p>
+        <p class="year">2022 - 2025</p>
+        <p class="desc">Studied core concepts of computer science including programming, web development, databases, and
+          networking. Gained practical experience through projects and hands-on labs.</p>
+      </div>
+      <div class="education-item">
+        <i class="fas fa-school education-icon"></i>
+        <h3>12th (CHSE)</h3>
+        <p class="institute">Council of Higher Secondary Education, Odisha</p>
+        <p class="year">2020 - 2022</p>
+        <p class="desc">Completed higher secondary education in Science stream with Computer Science as an elective.</p>
+      </div>
+      <div class="education-item">
+        <i class="fas fa-chalkboard-teacher education-icon"></i>
+        <h3>10th (HSC)</h3>
+        <p class="institute">Board of Secondary Education, Odisha</p>
+        <p class="year">2019 - 2020</p>
+        <p class="desc">Successfully completed secondary education with distinction and a strong interest in technology.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Project Section -->
+  <section id="projects" class="project-section" data-aos="fade-up" data-aos-duration="1200">
+    <h2 class="section-title"><i class="fas fa-folder-open"></i> My <span class="gradient-text">Projects</span></h2>
+    <div class="project-container">
+
+      <div class="project-card">
+        <img src="assets/hireflow.png" alt="Hire Flow Screenshot" class="project-image" />
+        <h3>Hire Flow</h3>
+        <div class="project-tags">
+          <span>MERN</span><span>Tailwind</span><span>ShadCN</span><span>Cloudinary</span>
+        </div>
+        <p class="project-desc">A full-featured job portal built using the MERN stack, Tailwind CSS, ShadCN UI, and
+          Cloudinary. Allows recruiters to post jobs and students to apply, focusing on local job opportunities.</p>
+        <a href="https://newjobportal-gqmi.onrender.com" target="_blank" class="project-link">Live Demo <i
+            class="fas fa-external-link-alt"></i></a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/chatbot.png" alt="Chatbot Screenshot" class="project-image" />
+        <h3>Weather App</h3>
+        <div class="project-tags">
+          <span>MERN</span><span>Tailwind</span><span>ShadCN</span><span>GEMINI</span> <span>Open AI</span>
+          <span>DeepSeek</span>
+        </div>
+        <p class="project-desc">A multilingual, AI-powered smart education chatbot built with the MERN stack. Users can
+          log in via email + OTP, choose among multiple language models (Gemini, OpenAI, DeepSeek), view or delete their
+          chat history, and get uninterrupted responses via an intelligent failover system. Designed to break language
+          barriers and provide reliable learning assistance across regions and subjects.</p>
+        <a href="https://github.com/chandankumar171/NEWCHATBOT/tree/main" target="_blank" class="project-link">View
+          Project <i class="fas fa-external-link-alt"></i></a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/Ecommerce.png" alt="SAHOO STORE" class="project-image" />
+        <h3>E-Commerce Website</h3>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <p class="project-desc">A modern and responsive eCommerce website built with HTML, CSS, and JavaScript. It
+          offers a seamless shopping experience with a clean interface, interactive features, and optimized performance
+          across all devices.</p>
+        <a href="https://github.com/chandankumar171/Ecommerce-Website/tree/main" target="_blank"
+          class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/weatherwidget.png" alt="Weather App Screenshot" class="project-image" />
+        <h3>Agri Market</h3>
+        <div class="project-tags">
+          <span>React</span><span>API</span>
+        </div>
+        <p class="project-desc">A React-based weather application that fetches real-time weather data using the
+          OpenWeatherMap API.</p>
+        <a href="https://yourweatherapp.com" target="_blank" class="project-link">View Project <i
+            class="fas fa-external-link-alt"></i></a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/spotify.png" alt="Weather App Screenshot" class="project-image" />
+        <h3>Spotify Clone</h3>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span>
+        </div>
+        <p class="project-desc">Used HTML & CSS Properties to build a clone of Spotify.</p>
+        <a href="https://github.com/chandankumar171/sptifyclone/tree/main/spotify%20clone" target="_blank"
+          class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section" data-aos="fade-up" data-aos-duration="1200">
+    <h2 class="section-title"><i class="fas fa-envelope"></i> Contact <span class="gradient-text">Me</span></h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Get in Touch!</h3>
+        <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha, India</li>
+          <li><i class="fas fa-envelope"></i> chandankumarsahoo171@gmail.com</li>
+          <li><i class="fas fa-phone"></i> +91 6371458048</li>
+          <li><a
+              href="https://www.linkedin.com/in/chandan-kumar-sahoo-3343a229b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://github.com/chandankumar171" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+      </div>
+      <div class="contact-form">
+        <h3>Send a Message</h3>
+        <form action="https://formspree.io/f/movdkbyq" method="POST">
+
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" data-aos="fade-up" data-aos-duration="1200">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Me</h3>
+        <p>
+          A passionate full-stack developer based in Bhubaneswar, India. I'm always eager to learn and build amazing
+          things.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Bhubaneswar, India</li>
+          <li><i class="fas fa-envelope"></i> chandankumarsahoo171@gmail.com</li>
+          <li><i class="fas fa-phone"></i> +91 6371458048</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Me</h3>
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/chandan-kumar-sahoo-3343a229b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/chandankumar171"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/chandan_9_?igsh=bTdpM2R4dWk3dGF1"><i class="fab fa-instagram"></i></a>
+          <a href="http://t.me/ChandanKumar_09"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Chandan Kumar Sahoo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (window.tsParticles) {
+        tsParticles.load('hero-bg-3d', {
+          fullScreen: { enable: false },
+          background: { color: 'transparent' },
+          particles: {
+            number: { value: 60, density: { enable: true, area: 800 } },
+            color: { value: ['#64FFDA', '#FFC107', '#1E90FF', '#fff'] },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5, random: true },
+            size: { value: 4, random: { enable: true, minimumValue: 1 } },
+            move: {
+              enable: true,
+              speed: 1.5,
+              direction: 'none',
+              random: true,
+              straight: false,
+              outModes: { default: 'out' },
+              attract: { enable: false }
+            },
+            links: {
+              enable: true,
+              distance: 120,
+              color: '#64FFDA',
+              opacity: 0.25,
+              width: 1
+            }
+          },
+          interactivity: {
+            events: {
+              onHover: { enable: true, mode: 'repulse' },
+              onClick: { enable: true, mode: 'push' }
+            },
+            modes: {
+              repulse: { distance: 80, duration: 0.4 },
+              push: { quantity: 4 }
+            }
+          },
+          detectRetina: true
+        });
+      }
+    });
+  </script>
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      offset: 60,
+      duration: 1200,
+      easing: 'ease-in-out',
+    });
+  </script>
+
+</body>
+
+</html>
